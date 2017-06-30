@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  7 16:22:03 2017
-
-@author: ruoyang1
-"""
 
 import jieba
 import re
@@ -67,7 +62,7 @@ tfidf_train = tfidftransformer.fit(counts_train).transform(counts_train)
 #print("the shape of test is "+repr(counts_test.shape)) 
 #tfidf_test = tfidftransformer.fit(counts_test).transform(counts_test)
 
-test_title='老外网购中国廉价防弹板想看笑话 结果令人震惊'
+test_title=' '
 test_title_token=[]
 
 token=jieba.cut_for_search(test_title)
