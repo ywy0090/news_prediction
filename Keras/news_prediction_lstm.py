@@ -1,16 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 27 12:11:21 2017
 
-@author: wenyu6
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 24 15:35:00 2017
-
-@author: wenyu6
-"""
 import numpy
 from gensim.models import word2vec
 import re
