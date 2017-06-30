@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 28 10:26:44 2017
 
-@author: wenyu6
-"""
 import numpy
 from gensim.models import word2vec
 import re
@@ -29,7 +25,7 @@ from pandas import DataFrame
 import keras.backend as K
 
 
-BASE_DIR = 'D:\\python_project\\news_prediction\\'
+BASE_DIR = ''
 MAX_SEQUENCE_LENGTH = 50
 MAX_NB_WORDS = 1000000
 EMBEDDING_DIM = 400
@@ -78,9 +74,9 @@ def recall(y_true, y_pred):
 ########loss analysis
 results = DataFrame()
 p= DataFrame()
-results=pandas.read_csv('lstm_loss.csv')
+results=pandas.read_csv('.csv')
 p['lstm']=results['lstm']
-results=pandas.read_csv('cnn_loss.csv')
+results=pandas.read_csv('.csv')
 p['cnn']=results['cnn']
 p.plot()
 plt.show()
@@ -88,7 +84,7 @@ plt.show()
 ######preparing_data###################
 texts = []  # list of text samples
 labels = []  # list of label ids
-data=open(os.path.join(BASE_DIR,'title5month_cms.txt'),'r',encoding='utf-8',errors='ignore')
+data=open(os.path.join(BASE_DIR,'.txt'),'r',encoding='utf-8',errors='ignore')
 channel_cons=u'娱乐'
 for line in data:
     line=re.sub(' ','',line)
@@ -119,7 +115,7 @@ words_index = {}
 for index,word in enumerate(word_counts):
     words_index[word]=index
 ##############################################
-model = word2vec.Word2Vec.load(os.path.join(BASE_DIR,"sina.zh.text.model"))
+model = word2vec.Word2Vec.load(os.path.join(BASE_DIR,""))
 sequence_vecs=numpy.zeros((len(title_token),MAX_SEQUENCE_LENGTH))
 for index,line in enumerate(title_token):
     title=line.strip().split(',')
