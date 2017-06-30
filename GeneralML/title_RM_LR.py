@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 21 14:47:14 2017
 
-@author: wenyu6
-"""
 
 import jieba
 import re
