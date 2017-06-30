@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 22 10:31:09 2017
-
-@author: wenyu6
-"""
 
 
 import jieba
@@ -59,7 +54,7 @@ for line in data:
 data.close()
 
 #user defined dict
-jieba.load_userdict("tags5month_cms.txt")
+jieba.load_userdict(".txt")
 title_token=[]
 
 for line in title:
