@@ -10,8 +10,8 @@ import jieba
 import re
 
 #content=[]
-##rootdir="D:\\tmpFile\\"
-#rootdir = "D:\\popular_news_prediction\\news_content\\"
+##rootdir=""
+#rootdir = ""
 #save_final = []
 #f_d = open('content'+'_mergeRes.txt', 'w')
 #for parent,dirnames,filenames in os.walk(rootdir):      
