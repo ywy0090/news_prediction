@@ -76,7 +76,7 @@ word2vec_vecs=[]
 model = word2vec.Word2Vec.load("sina.zh.text.model")
 #model=word2vec.Word2Vec(sentences, size=300, min_count=1)
 #with open(fileSegWordDonePath,'r',encoding='utf-8') as fr:
-#print(model[u'中国'])
+#print(model[u''])
 
 train_vecs = numpy.concatenate([buildWordVector(z, 400) for z in title_token])
 
