@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jun  9 16:14:51 2017
 
-@author: wenyu6
-"""
 
-#coding:utf-8  
-#!/usr/bin/python  
 import jieba
 import re
 import jieba.posseg as pseg
@@ -109,8 +103,6 @@ title_entry = Entry(root, textvariable = title_text)
 title_text.set(" ")
 title_entry.pack()  
 com = Button(root,text = '预测', command = lambda : on_click(count_v1, model)) 
-#　第一个参数root说明com按钮是root的孩子，text指按钮的名称，command指点击按钮时所执行的操作  
-#com = Button(root,text = '预测', command = on_hello)
 com.pack(side = BOTTOM)  #　次级窗口的位置摆放位置  
 root.mainloop()
 ## 
