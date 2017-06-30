@@ -30,8 +30,8 @@ title=[]
 label=[]
 
 #load training data
-data=open('title5month_cms.txt','r',encoding='utf-8',errors='ignore')
-channel_cons=u'娱乐'
+data=open('','r',encoding='utf-8',errors='ignore')
+channel_cons=u''
 for line in data:
     line=re.sub(' ','',line)
     line=re.sub('，',',',line)
