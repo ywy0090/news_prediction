@@ -28,7 +28,7 @@ title=[]
 label=[]
 
 #load training data
-data=open('article_data_auto_tmp2.txt','r',encoding='utf-8',errors='ignore')
+data=open('','r',encoding='utf-8',errors='ignore')
 
 for line in data:
     line=re.sub(' ','',line)    
