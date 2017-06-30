@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jun  8 11:42:45 2017
 
-@author: wenyu6
-"""
 
 import jieba
 import re
@@ -31,16 +27,16 @@ import multiprocessing
 
 
     
-fileSegPath ='content_SegRes.txt'
+fileSegPath ='.txt'
 #sentences = word2vec.Text8Corpus(fileSegPath)
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 #model=word2vec.Word2Vec(sentences, size=300, min_count=3)
 model=word2vec.Word2Vec(LineSentence(fileSegPath), size=400, window=5,min_count=3,
                         workers=multiprocessing.cpu_count())
 # outp1 为输出模型
-outp1 = 'sina.zh.text.model'
+outp1 = ''
 # outp2为原始c版本word2vec的vector格式的模型
-outp2 = 'sina.zh.text.vector' 
+outp2 = '' 
 model.save(outp1)
 model.wv.save_word2vec_format(outp2, binary=False)
 print(model[u'熊猫'])
