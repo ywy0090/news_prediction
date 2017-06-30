@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 13 20:59:27 2017
-
-@author: wenyu6
-"""
 
 
 import jieba
@@ -22,8 +17,8 @@ import re
 #f_d.close()
 #load training data
 content_token=[]    
-data=open('content_mergeRes.txt','r', encoding='utf-8',errors='ignore')
-seg_data=open('content_SegRes.txt','w',encoding='utf-8',errors='ignore')
+data=open('.txt','r', encoding='utf-8',errors='ignore')
+seg_data=open('.txt','w',encoding='utf-8',errors='ignore')
 #user defined dict
 jieba.load_userdict("tags5month_cms.txt")
 n=0
@@ -32,8 +27,8 @@ for line in data:
     if n%10000==0:
         print(n)
     line=re.sub(' ','',line)  
-    line=re.sub('font-family:宋体','',line)
-    line=re.sub('（文：','',line)
+    line=re.sub('font-family:','',line)
+    line=re.sub('（：','',line)
     line=re.sub('，',',',line)
     line=re.sub('[^\u4e00-\u9fa5]','',line)
     line=line.strip()  # split the tokens
