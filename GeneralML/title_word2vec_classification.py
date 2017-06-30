@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 12 19:54:13 2017
 
-@author: wenyu6
-"""
 import jieba
 import re
 import jieba.posseg as pseg
@@ -48,7 +44,7 @@ title=[]
 label=[]
 
 #load training data
-data=open('article_data_auto_tmp2.txt','r',encoding='utf-8',errors='ignore')
+data=open('.txt','r',encoding='utf-8',errors='ignore')
 
 for line in data:
     line=re.sub(' ','',line)    
@@ -77,10 +73,10 @@ for line in title:
 word2vec_vecs=[]
 #sentences = word2vec.Text8Corpus(title_token)
 #sentences= [s.split() for s in title_token]
-model = word2vec.Word2Vec.load("sina.zh.text.model")
+model = word2vec.Word2Vec.load("")
 #model=word2vec.Word2Vec(sentences, size=300, min_count=1)
 #with open(fileSegWordDonePath,'r',encoding='utf-8') as fr:
-#print(model[u'中国'])
+#print(model[u''])
 for line in title_token:
     title=line.strip().split(',')
     tmp_vec = getTitleVecs(title)
