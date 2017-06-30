@@ -23,12 +23,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import AdaBoostClassifier
 
 
-BASE_DIR = 'D:\\python_project\\news_prediction\\'
+BASE_DIR = ''
 title=[]
 label=[]
 uvs=[]
 #load training data
-data=open(os.path.join(BASE_DIR,'title5month_cms.txt'),'r',encoding='utf-16',errors='ignore')
+data=open(os.path.join(BASE_DIR,'cms.txt'),'r',encoding='utf-16',errors='ignore')
 channel_cons=u'体育'
 for line in data:
     line=re.sub(' ','',line)
