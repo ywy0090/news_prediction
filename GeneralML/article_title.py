@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  7 16:22:03 2017
 
-@author: wenyu6
-"""
 
 import jieba
 import re'
@@ -28,8 +24,8 @@ title=[]
 label=[]
 uvs=[]
 #load training data
-data=open(os.path.join(BASE_DIR,'cms.txt'),'r',encoding='utf-16',errors='ignore')
-channel_cons=u'体育'
+data=open(os.path.join(BASE_DIR,'.txt'),'r',encoding='utf-16',errors='ignore')
+channel_cons=u''
 for line in data:
     line=re.sub(' ','',line)
     line=re.sub('，',',',line)
