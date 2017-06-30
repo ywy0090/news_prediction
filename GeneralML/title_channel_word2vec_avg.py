@@ -1,23 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 15 11:12:41 2017
 
-@author: wenyu6
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 15 11:01:00 2017
-
-@author: wenyu6
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 12 19:54:13 2017
-
-@author: wenyu6
-"""
 import jieba
 import re
 import jieba.posseg as pseg
@@ -58,8 +39,8 @@ title=[]
 label=[]
 
 #load training data
-data=open('title_channel_data.txt','r',encoding='utf-8',errors='ignore')
-channel_cons=u'体育'
+data=open('','r',encoding='utf-8',errors='ignore')
+channel_cons=u''
 for line in data:
     line=re.sub(' ','',line)
     line=re.sub('，',',',line)
